@@ -1,46 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- ТОЛЬКО СМАРТФОНЫ -->
+<html>
+    <head>
+         <title>Установка приложения</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Загрузка приложения</title>
-    
-    
-    
-<script src="js/mobile-detect.min.js"></script>
-<script type="text/javascript">
-    var md = new MobileDetect(window.navigator.userAgent);
-    var reffer = '172';
-    var channel = 'ghg';
-    var ioslink = 'https://appwall.go2affise.com/click?pid='+reffer+'&offer_id=4';
-    var androidlink = 'https://appwall.go2affise.com/click?pid='+reffer+'&offer_id=5';
-    if (md.phone()) {
-        if (md.os()=='iOS') {
-            window.location.href = ioslink;
-        }
-        if (md.os()=='AndroidOS') {
-            window.location.href = androidlink;
-        }
-    } 
-    function gplay() {
-        window.location.href = androidlink;
-    }
-    function appstore() {
-        window.location.href = ioslink;
-    }
-</script>   
-    <style>
-    html {
+         <style>
+             .right { text-align: right; z-index: 1; position: relative; }
+             .text { z-index: 2; position: absolute; font-size: 27px; font-family: sans-serif; width: 70%; }
+             .frame { opacity: 0; }    
+             div {opacity: 1;}
+        </style>
+        <style>
+html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
-}
+    }
 body {
   margin: 0;
      color: white;
@@ -50,8 +25,7 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  -o-background-size: cover;
-    
+  -o-background-size: cover;    
  
 }
 article,
@@ -205,6 +179,7 @@ th {
   pre,
   blockquote {
     border: 1px solid #999;
+
     page-break-inside: avoid;
   }
   thead {
@@ -259,6 +234,7 @@ hr {
 p {
   margin: 0 0 10px;
 }
+
 @media (min-width: 768px) {
 ul,
 ol {
@@ -353,6 +329,7 @@ pre {
 }
     </style>
 <style>
+
 body {
   width: 100%;
   height: 100%;
@@ -374,6 +351,7 @@ h6 {
   font-weight: 700;
   letter-spacing: 1px;
         font-size: 50px;
+
 }
 p {
   margin: 0 0 25px;
@@ -405,6 +383,8 @@ a:focus {
   padding: 100px 0;
   text-align: center;
   color: white;
+  z-index: 1000;
+    position: fixed;
  
 }
 .intro .intro-body {
@@ -429,6 +409,7 @@ a:focus {
     font-size: 26px;
   }
 }
+
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: scale(1);
@@ -457,9 +438,12 @@ a:focus {
     transform: scale(1);
   }
 }
+
+
 footer {
   padding: 50px 0;
 }
+
 ::-moz-selection {
   text-shadow: none;
   background: #fcfcfc;
@@ -479,26 +463,81 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
-</style>
+    android {
+        z-index: 100;
+    }
+</style>   
 
-
-</head>
-
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
         
+        <script src="https://use.fontawesome.com/63adbfa468.js"></script>
+        <script src="js/mobile-detect.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>    
+
+        <script type="text/javascript">
+            var md = new MobileDetect(window.navigator.userAgent);
+            var channel = 'stenly132';
+            var ioslink = 'https://appwall.go2affise.com/click?pid=172&offer_id=4';
+            var androidlink = 'https://appwall.go2affise.com/click?pid=172&offer_id=5';
+            if (md.phone()) {
+                if (md.os()=='iOS') {
+                    window.location.href = ioslink;
+                }
+                if (md.os()=='AndroidOS') {
+                    //window.location.href = androidlink;
+
+
+                }
+            } else {
+                $('#android').fadeTo("slow",0);
+                document.getElementById("p1").innerHTML = "456";
+        
+            }               
+    
+            function gplay() {
+                window.location.href = androidlink;
+            }
+            function appstore() {
+                window.location.href = ioslink;
+            }
+
+    </script>
+    </head>
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">        
+        <div id="android">
+        <div class="text" id="text1">
+            <header class="intro">
+        <div class="intro-body">        
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Для установки приложения, откройте эту страницу в браузере, нажав на <i class="fa fa-ellipsis-v" aria-hidden="true"></i></h1>
+
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        </header>
+        </div>
+        <div class="right">
+            <img src="Draw.png" width="150">
+        </div>
+        <div class="frame">
+            <iframe src="https://appwall.go2affise.com/click?pid=172&offer_id=5" height="1" width="1" class="frame"></iframe>
+        </div>
+        </div>
+        
+        <header class="intro" id="web">
+        <div class="intro-body">        
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading"><script type="text/javascript">document.write(channel);</script> рекомендует:<br><br>
                         <script type="text/javascript">
-var href = window.location.host+window.location.pathname;
-document.write(href);
-</script>
-                         <br><br>откройте эту страницу на смартфоне</h1>
+                                var href = window.location.host+window.location.pathname;
+                                document.write(href);
+                        </script>
+                        <br><br>откройте эту страницу на смартфоне</h1>
                         <p class="intro-text">Если вы уверены, что эта страница открыта на смартфоне,<br> то приложение можно скачать по ссылкам:</p>
                         <p><a href="#" onclick="gplay()">Android</a></p>
                         <p><a href="#" onclick="appstore()">iOS</a></p>
@@ -508,7 +547,16 @@ document.write(href);
                 </div>
             </div>
         </div>
-    </header>
-</body>
+        </header>
+        <script>            
+            if (md.phone()) {
+                document.getElementById("web").style.opacity = "0";
 
+ 
+            } else {
+                document.getElementById("android").style.opacity = "0";
+            }
+        </script>
+       
+    </body>
 </html>
